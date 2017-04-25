@@ -44,12 +44,12 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Reports</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Export</a></li>
+                    <li class="active"><a href="index.html">首頁 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="parking-$tmpl-gmap-complete.html">停車場資訊</a></li>
+                    <li><a href="youbike-$tmpl-gmap-complete.html">Youbick站點查詢</a></li>
+                    <!--<li><a href="#"></a></li>-->
                 </ul>
-                <ul class="nav nav-sidebar">
+                <!--<ul class="nav nav-sidebar">
                     <li><a href="">Nav item</a></li>
                     <li><a href="">Nav item again</a></li>
                     <li><a href="">One more nav</a></li>
@@ -60,7 +60,7 @@
                     <li><a href="">Nav item again</a></li>
                     <li><a href="">One more nav</a></li>
                     <li><a href="">Another nav item</a></li>
-                </ul>
+                </ul>-->
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
@@ -103,9 +103,10 @@
                 <div class="panel-body park">
                     <p>${sarea}</p>
                     <!--顯示靜態 google map ↓-->
-                    <p><a class="address" href="https://www.google.com.tw/maps/?q=${lat},${lng}">
-                        <img src="http://maps.google.com/maps/api/staticmap?zoom=15&size=170x170&sensor=false&markers=${lat},${lng}" alt="">
-                    </a>
+                    <p>
+                        <a class="address" href="https://www.google.com.tw/maps/?q=${lat},${lng}">
+                            <img src="http://maps.google.com/maps/api/staticmap?zoom=15&size=170x170&sensor=false&markers=${lat},${lng}" alt="">
+                        </a>
                     </p>
                     <p>${sareaen}</p>
                     <a class="address" href="https://www.google.com.tw/maps/?q=${lat},${lng}" target="_blank">${ar}</a>
@@ -218,7 +219,7 @@
                             parkingLot.lat + "," + parkingLot.lng)
                         .prependTo($parkingLots);
 
-                        
+
 
                     // 申請 Google API key
                     // https://developers.google.com/maps/documentation/embed/guide?hl=zh-tw
